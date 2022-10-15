@@ -1,0 +1,41 @@
+body {
+  font-family: Tahoma;
+  background-color: #c4f3c4;
+  line-height: 2em;
+}
+h1,
+h3 {
+  border-top: dotted 1px #f111;
+  border-bottom: dotted 1px #f111;
+}
+.primary-text {
+  color: #f3eded;
+}
+.btn,
+.primary-btn {
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 10px;
+}
+ul#menu {
+  list-style: none;
+  background-color: #9ff3f3;
+}
+ul#menu li {
+  padding: 10px 0;
+}
+ul#menu li a {
+  color: #108383;
+  text-decoration: none;
+}
+ul#menu li a:hover {
+  color: grey;
+}
+.primary-btn {
+  background: #f3eded;
+  color: black;
+}
+.bordered {
+  border-top: dotted 1px #f111;
+  border-bottom: dotted 1px #f111;
+}

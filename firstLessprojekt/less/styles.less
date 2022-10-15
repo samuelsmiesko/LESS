@@ -1,0 +1,64 @@
+@background-color:rgb(196, 243, 196);
+@font-family: Tahoma;
+@primary-color:rgb(243, 237, 237);
+@secondary-color:rgb(16, 131, 131);
+@line-height: 1em+1em;
+
+
+//text color mixin
+.text-color(@a) when (lightness(@a) >=50%){
+    color:black;
+}
+.text-color(@a) when (lightness(@a) <=50%){
+    color:grey;
+}
+
+body{
+    font-family:@font-family;
+
+    background-color:@background-color;
+    line-height:@line-height;
+}
+
+h1, h3{
+    .bordered
+}
+
+.primary-text{
+    color:@primary-color;
+}
+
+.btn{
+    padding: 10px 15px;
+    border:0;
+    .border-radius(10px);
+}
+
+ul#menu{
+    list-style: none;
+    background-color: lighten(@secondary-color,50%);
+    li{
+        padding: 10px 0;
+        a{
+            color: @secondary-color;
+            text-decoration: none;
+            &:hover{
+                color:grey;
+            }
+        }
+    }
+}
+
+.primary-btn:extend(.btn){
+    background: @primary-color;
+    .text-color(@primary-color);
+}
+
+.border-radius(@radius){
+    border-radius:@radius;
+}
+
+.bordered{
+    border-top: dotted 1px #f111;
+    border-bottom: dotted 1px #f111;
+}
